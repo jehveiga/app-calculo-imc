@@ -1,39 +1,48 @@
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h1:focus {
+/* Reset */
+*:focus {
     outline: none;
 }
 
-a, .btn-link {
-    color: #0071c1;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: #fff;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+/* Layouts */
+.flex {
+    display: flex;
+    flex-direction: column;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.flex-center {
+    align-items: center;
 }
 
-.content {
-    padding-top: 1.1rem;
+.container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column nowrap;
+    scroll-snap-type: y mandatory;
+
+    scroll-behavior: smooth;
 }
 
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+.container::-webkit-scrollbar{
+    width: 0.7em;
 }
 
-.invalid {
-    outline: 1px solid red;
+.container::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0.02);
 }
 
-.validation-message {
-    color: red;
+.container::-webkit-scrollbar-thumb{
+    background: #333;
+    border-radius: 0.7em;
 }
 
 #blazor-error-ui {
@@ -97,7 +106,3 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
-
-code {
-    color: #c02d76;
-}
