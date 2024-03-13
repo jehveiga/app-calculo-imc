@@ -1,0 +1,13 @@
+<div class="slide" id="@Id">
+    @ChilContent
+</div>
+
+@code{
+    [EditorRequired]
+    [Parameter]
+    public string Id { get; set; } = string.Empty;
+
+    [EditorRequired]
+    [Parameter]
+    public RenderFragment ChilContent { get; set; } = null!;
+}
