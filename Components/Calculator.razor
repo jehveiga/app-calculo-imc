@@ -1,1 +1,36 @@
-﻿
+﻿<EditForm Model="@_model" OnInvalidSubmit="@OnValidSubmitAsync">
+    <DataAnnotationsValidator/>
+
+    <div class="mb">
+        <InputNumber @bind-Value="_model.Height" class="form-input" typeof="number" step="0.01" placeholder="Altura"></InputNumber>
+        <span class="form-input-invalid">
+            <ValidationMessage For="@(() => _model.Height)"/>
+        </span>
+    </div>
+
+    <div class="mb">
+        <InputNumber @bind-Value="_model.Weight" class="form-input" typeof="number" step="0.1" placeholder="Peso"></InputNumber>
+        <span class="form-input-invalid">
+            <ValidationMessage For="@(() => _model.Weight)" />
+        </span>
+    </div>
+
+    <div class="flex flex-center">
+        <button type="submit" class="btn btn-filled btn-auto mb">
+            Calcular meu IMC
+        </button>
+        <a class="btn btn-link" href="#about">
+            Entenda o cálculo
+        </a>
+    </div>
+</EditForm>
+
+
+
+@code{
+    private ImcModel _model =new();
+
+    public async Task OnValidSubmitAsync(){
+
+    }
+}
