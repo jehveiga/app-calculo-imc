@@ -1,0 +1,20 @@
+﻿@inject IJSRuntime JsRuntime
+
+<dialog id="result-dialog">
+    <div class="dialog-content">
+        @ChildContent
+        <br />
+    </div>
+</dialog>
+
+
+@code {
+    [EditorRequired]
+    [Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    public async Task ShowModalAsync()
+    {
+        await JsRuntime.InvokeVoidAsync("showModal", "result-dialog");
+    }
+}

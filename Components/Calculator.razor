@@ -25,12 +25,22 @@
     </div>
 </EditForm>
 
+<Dialog @ref="_dialog">
+    <h1>Modal</h1>
+</Dialog>
+
 
 
 @code{
+    private Dialog _dialog = null!;
     private ImcModel _model =new();
 
-    public async Task OnValidSubmitAsync(){
-
+    public async Task OnValidSubmitAsync()
+    {
+        await ShowModalAsync();
     }
+
+    private Task ShowModalAsync() 
+        => _dialog.ShowModalAsync();
+    
 }
