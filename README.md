@@ -1,6 +1,6 @@
 # Aplicação Cálculo de IMC
 
-[![NPM](https://img.shields.io/github/license/jehveiga/Blog-api)](https://github.com/jehveiga/dev-freela/blob/main/LICENSE)
+[![NPM](https://img.shields.io/github/license/jehveiga/Blog-api)](https://github.com/jehveiga/app-calculo-imc/blob/main/LICENSE)
 
 # Sobre o projeto
 
