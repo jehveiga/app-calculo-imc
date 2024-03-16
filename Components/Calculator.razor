@@ -1,4 +1,6 @@
-﻿<EditForm Model="@_model" OnValidSubmit="@OnValidSubmitAsync">
+﻿@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+
+<EditForm Model="@_model" OnValidSubmit="@OnValidSubmitAsync">
     <DataAnnotationsValidator/>
 
     <div class="mb">
@@ -59,6 +61,9 @@
 
     private async Task OnModalClose()
     {
+        AppState.History.Add(_model);
+        LocalStorage.SetItemAsync("data", AppState.History);
+        AppState.NotifyChanges(_model, null);
         _model = new ImcModel();
     }
 

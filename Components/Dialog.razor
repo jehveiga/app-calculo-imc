@@ -23,12 +23,15 @@
     public async Task ShowModalAsync()
     {
         await JsRuntime.InvokeVoidAsync("showModal", "result-dialog");
+        // Notifica aos componentes que teve mudança para renderizar novamente
+        StateHasChanged();
     }
 
     private async Task HideModalAsync()
     {
         await JsRuntime.InvokeVoidAsync("hideModal", "result-dialog");
-
+        // Notifica aos componentes que teve mudança para renderizar novamente
+        StateHasChanged();
         NavigationManager.NavigateTo("#history");
 
         await OnModalCloseCallback.InvokeAsync();
