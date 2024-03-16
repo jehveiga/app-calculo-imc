@@ -1,11 +1,12 @@
 {
-  "name": "AppImc",
-  "short_name": "AppImc",
+  "name": "AppIMC",
+  "short_name": "AppIMC",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#03173d",
+  "orientation": "portrait",
   "prefer_related_applications": false,
   "icons": [
     {
@@ -14,7 +15,7 @@
       "sizes": "512x512"
     },
     {
-      "src": "icon-192.png",
+      "src": "images/android-icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     }
