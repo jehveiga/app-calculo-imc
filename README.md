@@ -11,7 +11,7 @@ URL da aplicação usando GitHub Pages: [Aplicação cálculo de IMC](https://je
 # Apresentação Calculadora de IMC 
 
 ## Visualizando funcionalidades - Exibindo as funcionalidades da aplicação do cálculo
-![Apresentacao Projeto com Swagger](https://github.com/jehveiga/dev-freela/blob/main/assets/apresentacao_swagger.gif)
+![Aplicação Cálculo de IMC](https://github.com/jehveiga/app-calculo-imc/blob/main/assets/apresentacao-calculadora-imc.gif)
 
 ## Back end
 
